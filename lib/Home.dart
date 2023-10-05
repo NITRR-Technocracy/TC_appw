@@ -43,7 +43,9 @@ _launchURL()async{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.orange.shade50,
       appBar: AppBar(
+        backgroundColor: Colors.orange.shade100,
         title: const Text('The Technocracy'),
         actions: [
           IconButton(onPressed:()async{scanQR();}, icon: Icon(Icons.qr_code),),
@@ -51,9 +53,15 @@ _launchURL()async{
         ],
       ) ,
       body: Column(
+        mainAxisSize: MainAxisSize.max,
         children: [
+          Image.asset('assets/images/prop1.png'),
           Text("Scan result:${_scanBarcode}"),
-          TextButton(onPressed:()async{_launchURL();}, child: Text('Visit Web'))
+         SizedBox(
+           width: double.infinity,
+           child: ElevatedButton(onPressed: ()async{_launchURL();},child: const Text('Visit Web',),style: ElevatedButton.styleFrom(backgroundColor: Colors.orange.shade100),),
+         ),
+
         ],
       ),
     );

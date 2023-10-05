@@ -12,6 +12,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _selectedIndex=0;
+  Color c=Colors.orange.shade50;
   String _appbartitle="Home";
   Color _appbarcolor=Colors.black;
 
@@ -23,6 +24,16 @@ class _MainPageState extends State<MainPage> {
 
   void _onItemTap(int index){
     setState(() {
+      switch(index){
+        case 0:
+          c=Colors.orange.shade50;
+          break;
+        case 1:
+          c=Colors.lightGreen.shade50;
+          break;
+        case 2:
+          c=Colors.purple.shade50;
+      }
       _selectedIndex=index;
     });
   }
@@ -31,7 +42,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: c,
         items:const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
@@ -47,8 +58,7 @@ class _MainPageState extends State<MainPage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white60,
+
         onTap: _onItemTap,
       ),
       body: SafeArea(child: _widgets[_selectedIndex]),

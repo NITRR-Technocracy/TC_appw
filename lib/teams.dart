@@ -13,6 +13,7 @@ class ListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.lightGreen.shade50,
         title: const Text('Teams'),
       ),
       body: ListView.builder(

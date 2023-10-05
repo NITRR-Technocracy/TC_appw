@@ -29,6 +29,7 @@ class ListEventScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.purple.shade50,
         title: Text('Events'),
       ),
       body: ListView.builder(

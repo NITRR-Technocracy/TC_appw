@@ -45,7 +45,6 @@ class _VigyaanPageState extends State<VigyaanPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
             body: ListScreen(
               teams: List.generate(20, (index) => Teams(title: 'Team ${index+1}', desc: 'This is description for team ${index+1}')),
 
