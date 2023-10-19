@@ -46,7 +46,7 @@ _launchURL()async{
       backgroundColor: Colors.orange.shade50,
       appBar: AppBar(
         backgroundColor: Colors.orange.shade100,
-        title: const Text('The Technocracy'),
+        title: const Text('Home'),
         actions: [
           IconButton(onPressed:()async{scanQR();}, icon: Icon(Icons.qr_code),),
           SizedBox(width: 10),
@@ -55,7 +55,7 @@ _launchURL()async{
       body: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
-          Image.asset('assets/images/prop1.png'),
+          Image.asset('asset/images/prop1.png'),
           Text("Scan result:${_scanBarcode}"),
          SizedBox(
            width: double.infinity,
