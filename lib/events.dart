@@ -46,5 +46,3 @@ class ListEventScreen extends StatelessWidget {
     );
   }
 }
-
-
